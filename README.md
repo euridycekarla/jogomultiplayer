@@ -1,4 +1,7 @@
 # game-multiplayer
+# Dupla: 
+<li> Euridyce Karla Carvalho </li>
+<li> Amanda de Oliveira Bonfim </li> 
 
 <div align="center">
   <img height="30" alt="Express" src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge">
