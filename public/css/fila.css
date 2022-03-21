@@ -1,0 +1,187 @@
+#buscarfila {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #11aaff, #7703b9, #ff11aa);
+  background-size: 250% 100%;
+  color: white;
+  animation: animationColor ease-in-out 2s infinite;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@keyframes animationColor {
+  0%     {background-position: 0% 50%}
+  50%     {background-position: 100% 50%}
+  100%     {background-position: 0% 50%}
+}
+
+#buscarfila h1{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 3rem;
+  text-align: center;
+}
+
+#buscarfila button{
+  background-color: transparent;
+  font-size: 2rem;
+  padding: 10px 25px;
+  margin-top: 10px;
+  outline: none;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.container {
+  height: 100vh;
+  padding: 2%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #9900ff;
+  display: none;
+}
+
+.container h1 {
+  font-size: 2rem;
+}
+
+.container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#jogo {
+  border-radius: 20px;
+  background: linear-gradient(#9900ff, #6611ff);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  width: 100%;
+  display: none;
+}
+
+#jogo button {
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid white;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  padding: 30px 0;
+}
+
+#jogo button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#jogo button:nth-child(3n+0) { border-right: none; }/*  Pega a parte da direita */
+#jogo button:nth-child(3n+1) { border-left: none; } /*  Pega a parte da esquerda */
+#jogo button:nth-child(n+7) { border-bottom: none; } /*  Pega a parte de baixo */
+#jogo button:nth-child(1) {border-top: none;} /*  Pega a parte de cima */
+#jogo button:nth-child(2) { border-top: none;} /*  Pega a parte de cima */
+#jogo button:nth-child(3) { border-top: none;} /*  Pega a parte de cima */
+#jogo button:nth-child(1) { border-radius: 20px 0 0 0} /*  Pega a parte de cima */
+#jogo button:nth-child(3) { border-radius: 0 20px 0 0} /*  Pega a parte de cima */
+#jogo button:nth-child(9) { border-radius: 0 0 20px 0} /*  Pega a parte de cima */
+#jogo button:nth-child(7) { border-radius: 0 0 0 20px} /*  Pega a parte de cima */
+
+#jogo-acoes {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#jogo-acoes button {
+  border-radius: 20px;
+  padding: 10px 30px;
+  border: none;
+  outline: none;
+  background: linear-gradient(#9900ff, #6611ff);
+  font-size: 2rem;
+}
+
+#jogo-acoes button a {
+  color: white;
+  text-decoration: none;
+}
+
+#deu-velha {
+  background: linear-gradient(90deg, #11aaff, #7703b9, #ff11aa);
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  display: none;
+}
+
+#deu-velha .img-velha {
+  width: 250px;
+  display: block;
+}
+
+#deu-velha img {
+  width: 100%;
+  margin: 0 auto;
+  animation: velha 1s infinite alternate;
+}
+
+@keyframes velha {
+  0% { transform: rotate(-20deg)}
+  10% { transform: rotate(20deg)}
+  20% { transform: rotate(-20deg)}
+  30% { transform: rotate(20deg)}
+  40% { transform: rotate(-20deg)}
+  50% { transform: rotate(20deg)}
+  60% { transform: rotate(0deg)}
+  70% { transform: rotate(0deg)}
+  80% { transform: rotate(0deg)}
+  90% { transform: rotate(0deg)}
+  100% { transform: rotate(0deg)}
+}
+
+#deu-velha button {
+  background-color: transparent;
+  font-size: 2rem;
+  padding: 10px 25px;
+  margin-top: 10px;
+  outline: none;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: white;
+}
+
+#deu-velha button a {
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 700px) {
+  #jogo {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  #jogo-acoes {
+  }
+}
